@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:petsgo/pages/login_page.dart';
+import 'package:petsgo/pages/init_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(const Duration(seconds: 3), () async{
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LoginPage()),
+        MaterialPageRoute(builder: (context) => const InitPage()),
       );
     });
   }
