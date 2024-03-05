@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petsgo/pages/login_page.dart';
 import 'package:petsgo/pages/register_page.dart';
 
 class InitPage extends StatefulWidget {
@@ -11,7 +12,7 @@ class InitPage extends StatefulWidget {
 class _InitPageState extends State<InitPage> {
 
   void _onLoginButtonClicked(){
-
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 
   void _onRegisterButtonClicked(){
