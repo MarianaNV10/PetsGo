@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petsgo/pages/register_page.dart';
 
 class InitPage extends StatefulWidget {
   const InitPage({super.key});
@@ -14,9 +15,10 @@ class _InitPageState extends State<InitPage> {
   }
 
   void _onRegisterButtonClicked(){
-
+    setState(() {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+    });
   }
-
 
   @override
   Widget build(BuildContext context) {
