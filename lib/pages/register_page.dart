@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petsgo/pages/confR_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -17,6 +18,10 @@ class _RegisterPageState extends State<RegisterPage> {
   bool _passwordVisibility = false;
 
   Rol? _rol = Rol.paseador;
+
+  void _onCreateAccountButtonClicked(){
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => RegisterConfPage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -195,7 +200,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                     onPressed: (){
-
+                      _onCreateAccountButtonClicked();
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.lightBlue,

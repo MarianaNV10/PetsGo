@@ -16,9 +16,7 @@ class _InitPageState extends State<InitPage> {
   }
 
   void _onRegisterButtonClicked(){
-    setState(() {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => RegisterPage()));
-    });
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => RegisterPage()));
   }
 
   @override
