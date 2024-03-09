@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:petsgo/pages/certification_page.dart';
 
 class ProfileWalkerPage extends StatefulWidget {
   const ProfileWalkerPage({super.key});
@@ -29,6 +30,10 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
         imageBase64 = base64Encode(byte);
       }
     });
+  }
+
+  void _onCertificationButtonClicked(){
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CertificationPage()));
   }
 
   @override
@@ -175,7 +180,9 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                             fontSize: 18,
                           ),
                         ),
-                        onPressed: (){},
+                        onPressed: (){
+                          _onCertificationButtonClicked();
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue,
                         ),
