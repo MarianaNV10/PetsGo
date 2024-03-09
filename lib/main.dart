@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petsgo/pages/confR_page.dart';
 import 'package:petsgo/pages/login_page.dart';
+import 'package:petsgo/pages/profilewalker_page.dart';
 import 'package:petsgo/pages/register_page.dart';
 import 'package:petsgo/pages/splash_page.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SplashPage(),
+      home: const ProfileWalkerPage(),
     );
   }
 }
