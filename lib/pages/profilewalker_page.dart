@@ -48,7 +48,7 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
               children: <Widget>[
                 const Text(
                   "Datos paseador",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),
@@ -69,8 +69,8 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                             backgroundColor: Colors.white60,
                             child: IconButton(
                               onPressed: _getImage,
-                              icon: Icon(Icons.edit),
-                              color: Color(0xFFEC407A),
+                              icon: const Icon(Icons.edit),
+                              color: const Color(0xFFEC407A),
                             ),
                           ),
                         ),
@@ -82,7 +82,7 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                 ),
                 const Text(
                   "Laura López",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 25,
                     color: Color(0xFF8492A6),
                   ),
@@ -173,18 +173,18 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                       width: 150,
                       height: 45,
                       child: ElevatedButton(
-                        child: Text(
-                          'Certificados',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        ),
                         onPressed: (){
                           _onCertificationButtonClicked();
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue,
+                        ),
+                        child: const Text(
+                          'Certificados',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         ),
                       ),
                     ),
@@ -195,18 +195,18 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                       width: 150,
                       height: 45,
                       child: ElevatedButton(
-                        child: Text(
-                          'Finalizar',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        ),
                         onPressed: (){
 
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue,
+                        ),
+                        child: const Text(
+                          'Finalizar',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         ),
                       ),
                     ),

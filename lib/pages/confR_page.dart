@@ -12,7 +12,7 @@ class _RegisterConfPageState extends State<RegisterConfPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +23,7 @@ class _RegisterConfPageState extends State<RegisterConfPage> {
               const SizedBox(
                 height: 16.0,
               ),
-              Text(
+              const Text(
                 "¡Bienvenid@ a PetsGo!",
                 style: const TextStyle(
                   fontSize: 18,
@@ -33,7 +33,7 @@ class _RegisterConfPageState extends State<RegisterConfPage> {
               const SizedBox(
                 height: 16.0,
               ),
-              Text(
+              const Text(
                 "Se ha enviado una confirmación de la creación de la cuenta al correo registrado.",
                 textAlign: TextAlign.center,
                 style: const TextStyle(

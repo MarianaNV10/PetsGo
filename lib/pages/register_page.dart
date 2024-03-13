@@ -33,9 +33,9 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text(
+                const Text(
                   "Registrarse",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),
@@ -46,17 +46,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 TextFormField(
                   controller: _name,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.account_circle, size: 27.0),
-                    prefixIconColor: Color(0xFFEC407A),
+                    prefixIcon: const Icon(Icons.account_circle),
+                    prefixIconColor: const Color(0xFFEC407A),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF8492A6),
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF1565C0),
                       ),
                     ),
@@ -69,17 +69,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 TextFormField(
                   controller: _email,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.email, size: 27.0,),
-                    prefixIconColor: Color(0xFFEC407A),
+                    prefixIcon: const Icon(Icons.email),
+                    prefixIconColor: const Color(0xFFEC407A),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF8492A6),
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF1565C0),
                       ),
                     ),
@@ -93,12 +93,12 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: _password,
                   obscureText: !_passwordVisibility,
                   decoration: InputDecoration(
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                    prefixIcon: const Padding(
+                      padding: EdgeInsets.all(12.0),
                       child: Image(
                         image: AssetImage('assets/images/iconPass.png'),
-                        width: 25,
-                        height: 25,
+                        width: 24,
+                        height: 24,
                       ),
                     ),
                     suffixIcon: IconButton(
@@ -109,16 +109,16 @@ class _RegisterPageState extends State<RegisterPage> {
                         });
                       },
                     ),
-                    suffixIconColor: Color(0xFFEC407A),
+                    suffixIconColor: const Color(0xFFEC407A),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF8492A6),
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF1565C0),
                       ),
                     ),
@@ -134,8 +134,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     Expanded(
                       child: RadioListTile(
                         title: const Text('Paseador'),
-                        activeColor: Color(0xFFEC407A),
-                        fillColor: MaterialStateProperty.all(Color(0xFFEC407A)),
+                        activeColor: const Color(0xFFEC407A),
+                        fillColor: MaterialStateProperty.all(const Color(0xFFEC407A)),
                         value: Rol.paseador,
                         groupValue: _rol,
                         onChanged: (Rol? value){
@@ -148,8 +148,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     Expanded(
                       child: RadioListTile(
                         title: const Text('Dueño de mascota'),
-                        activeColor: Color(0xFFEC407A),
-                        fillColor: MaterialStateProperty.all(Color(0xFFEC407A)),
+                        activeColor: const Color(0xFFEC407A),
+                        fillColor: MaterialStateProperty.all(const Color(0xFFEC407A)),
                         value: Rol.dueno,
                         groupValue: _rol,
                         onChanged: (Rol? value){
@@ -176,13 +176,13 @@ class _RegisterPageState extends State<RegisterPage> {
                     style: TextStyle(color: Color(0xFF8492A6)),
                   ),
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                       side: BorderSide(color: Color(0xFFEC407A), width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(50)),
                     ),
                     primary: Colors.white,
                     shadowColor: Colors.white,
-                    foregroundColor: Color(0xFFA5E0F8),
+                    foregroundColor: const Color(0xFFA5E0F8),
                   ),
                 ),
                 const SizedBox(
@@ -192,9 +192,9 @@ class _RegisterPageState extends State<RegisterPage> {
                   width: 200,
                   height: 45,
                   child: ElevatedButton(
-                    child: Text(
+                    child: const Text(
                       'Crear Cuenta',
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                       ),

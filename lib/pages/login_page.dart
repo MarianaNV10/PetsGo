@@ -23,9 +23,9 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text(
+                const Text(
                   "Iniciar Sesión",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),
@@ -33,16 +33,16 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(
                   height: 35.0,
                 ),
-                Text(
+                const Text(
                   "PetsGo",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 46,
                     fontFamily: 'Sensei',
                   ),
                 ),
-                Text(
+                const Text(
                   "Paseo para mascotas",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 18,
                     color: Color(0xFF8492A6),
                   ),
@@ -53,17 +53,17 @@ class _LoginPageState extends State<LoginPage> {
                 TextFormField(
                   controller: _email,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.email, size: 27.0,),
-                    prefixIconColor: Color(0xFFEC407A),
+                    prefixIcon: const Icon(Icons.email),
+                    prefixIconColor: const Color(0xFFEC407A),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF8492A6),
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF1565C0),
                       ),
                     ),
@@ -77,12 +77,12 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _password,
                   obscureText: !_passwordVisibility,
                   decoration: InputDecoration(
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                    prefixIcon: const Padding(
+                      padding: EdgeInsets.all(12.0),
                       child: Image(
                         image: AssetImage('assets/images/iconPass.png'),
-                        width: 25,
-                        height: 25,
+                        width: 24,
+                        height: 24,
                       ),
                     ),
                     suffixIcon: IconButton(
@@ -93,16 +93,16 @@ class _LoginPageState extends State<LoginPage> {
                         });
                       },
                     ),
-                    suffixIconColor: Color(0xFFEC407A),
+                    suffixIconColor: const Color(0xFFEC407A),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF8492A6),
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF1565C0),
                       ),
                     ),
@@ -124,13 +124,13 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Color(0xFF8492A6)),
                   ),
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                       side: BorderSide(color: Color(0xFFEC407A), width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(50)),
                     ),
                     primary: Colors.white,
                     shadowColor: Colors.white,
-                    foregroundColor: Color(0xFFA5E0F8),
+                    foregroundColor: const Color(0xFFA5E0F8),
                   ),
                 ),
                 const SizedBox(
@@ -140,18 +140,18 @@ class _LoginPageState extends State<LoginPage> {
                   width: 200,
                   height: 45,
                   child: ElevatedButton(
-                    child: Text(
-                      'Iniciar Sesión',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
-                    ),
                     onPressed: (){
 
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.lightBlue,
+                    ),
+                    child: const Text(
+                      'Iniciar Sesión',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ),

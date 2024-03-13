@@ -44,16 +44,16 @@ class _InitPageState extends State<InitPage> {
                   const SizedBox(
                     height: 16.0,
                   ),
-                  Text(
+                  const Text(
                     "PetsGo",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 46,
                       fontFamily: 'Sensei',
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Paseo para mascotas",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 18,
                       color: Color(0xFF8492A6),
                     ),
@@ -65,18 +65,18 @@ class _InitPageState extends State<InitPage> {
                     width: 200,
                     height: 45,
                     child: ElevatedButton(
-                      child: Text(
-                        'Iniciar Sesión',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                        ),
-                      ),
                       onPressed: (){
                         _onLoginButtonClicked();
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.lightBlue,
+                      ),
+                      child: const Text(
+                        'Iniciar Sesión',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ),
@@ -87,18 +87,18 @@ class _InitPageState extends State<InitPage> {
                     width: 200,
                     height: 45,
                     child: ElevatedButton(
-                      child: Text(
-                        'Registrarse',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                        ),
-                      ),
                       onPressed: (){
                         _onRegisterButtonClicked();
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.lightBlue,
+                      ),
+                      child: const Text(
+                        'Registrarse',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ),
