@@ -16,7 +16,7 @@ class _InitPageState extends State<InitPage> {
   }
 
   void _onRegisterButtonClicked(){
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
   }
 
   @override
@@ -27,10 +27,7 @@ class _InitPageState extends State<InitPage> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Image.asset(
-              'assets/images/fondoh.png',
-              fit: BoxFit.cover,
-            ),
+            Image(image: new AssetImage('assets/images/Plantilla.png'), fit: BoxFit.cover,),
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

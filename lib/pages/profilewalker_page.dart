@@ -33,7 +33,7 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
   }
 
   void _onCertificationButtonClicked(){
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CertificationPage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => CertificationPage()));
   }
 
   @override

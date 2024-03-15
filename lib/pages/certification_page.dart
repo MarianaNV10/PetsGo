@@ -1,5 +1,6 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:petsgo/pages/profilewalker_page.dart';
 
 class CertificationPage extends StatefulWidget {
   const CertificationPage({super.key});
@@ -14,15 +15,42 @@ class _CertificationPageState extends State<CertificationPage> {
   String? fileA = "";
   String? fileCA = "";
 
+  bool banFile1 = false;
+  bool banFile2 = false;
+  bool banFile3 = false;
+
+  String text1 = "Primeros auxilios";
+  String text2 = "Adiestramiento";
+  String text3 = "Cuidado de animales";
+
   Future _getDocument(int index) async {
+    FilePickerResult? result  = await FilePicker.platform.pickFiles();
     if (index == 0){
-      filePA = (await FilePicker.platform.pickFiles()) as String?;
+      if (result != null) {
+        banFile1 = true;
+        filePA = result.files.single.path;
+        setState(() {
+          text1 = "Primeros auxilios - subido";
+        });
+      }
     }
     else if (index == 1){
-      fileA = (await FilePicker.platform.pickFiles()) as String?;
+      if (result != null) {
+        banFile2 = true;
+        fileA = result.files.single.path;
+        setState(() {
+          text2 = "Adiestramiento - subido";
+        });
+      }
     }
     else{
-      fileCA = (await FilePicker.platform.pickFiles()) as String?;
+      if (result != null) {
+        banFile3 = true;
+        fileCA = result.files.single.path;
+        setState(() {
+          text3 = "Cuidado de animales - subido";
+        });
+      }
     }
   }
 
@@ -31,6 +59,16 @@ class _CertificationPageState extends State<CertificationPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Certificaciones'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.help_outline_outlined),
+            tooltip: 'Help',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Se puede ingresar pdf o imágenes.')));
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
@@ -57,12 +95,13 @@ class _CertificationPageState extends State<CertificationPage> {
               TextButton.icon(
                 onPressed: (){
                   _getDocument(0);
+                  //_updateFile();
                 },
                 icon: const Icon(
                   Icons.add_box,
                   color: Color(0xFFEC407A),
                 ),
-                label: const Text('Primeros auxilios'),
+                label: Text(text1),
                 style: const ButtonStyle(
                   foregroundColor: MaterialStatePropertyAll(Color(0xFF8492A6)),
                   overlayColor: MaterialStatePropertyAll(Colors.black12),
@@ -71,12 +110,13 @@ class _CertificationPageState extends State<CertificationPage> {
               TextButton.icon(
                 onPressed: (){
                   _getDocument(1);
+                  //_updateFile();
                 },
                 icon: const Icon(
                   Icons.add_box,
                   color: Color(0xFFEC407A),
                 ),
-                label: const Text('Adiestramiento'),
+                label: Text(text2),
                 style: const ButtonStyle(
                   foregroundColor: MaterialStatePropertyAll(Color(0xFF8492A6)),
                   overlayColor: MaterialStatePropertyAll(Colors.black12),
@@ -85,12 +125,14 @@ class _CertificationPageState extends State<CertificationPage> {
               TextButton.icon(
                 onPressed: (){
                   _getDocument(2);
+                  //_updateFile();
                 },
+
                 icon: const Icon(
                   Icons.add_box,
                   color: Color(0xFFEC407A),
                 ),
-                label: const Text('Cuidado de animales',),
+                label: Text(text3),
                 style: const ButtonStyle(
                   foregroundColor: MaterialStatePropertyAll(Color(0xFF8492A6)),
                   overlayColor: MaterialStatePropertyAll(Colors.black12),
