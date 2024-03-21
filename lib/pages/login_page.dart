@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:petsgo/pages/home_button_navigation_bar_page.dart';
+import 'package:petsgo/pages/owner_init_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,6 +14,16 @@ class _LoginPageState extends State<LoginPage> {
   final _email = TextEditingController();
   final _password = TextEditingController();
   bool _passwordVisibility = false;
+  bool _rolOwner = true; //Es Dueño de mascota
+  bool _rolWalker = false;
+  void _onLoginButtonClicked(){
+    if(_rolOwner){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeButtonNavigationPage()));
+    }
+    else{
+      //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ()));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +140,6 @@ class _LoginPageState extends State<LoginPage> {
                       side: BorderSide(color: Color(0xFFEC407A), width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(50)),
                     ),
-                    primary: Colors.white,
                     shadowColor: Colors.white,
                     foregroundColor: const Color(0xFFA5E0F8),
                   ),
@@ -141,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 45,
                   child: ElevatedButton(
                     onPressed: (){
-
+                      _onLoginButtonClicked();
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.lightBlue,

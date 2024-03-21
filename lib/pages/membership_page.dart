@@ -18,6 +18,9 @@ class _MembershipPageState extends State<MembershipPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 12.0),
+        ),
         const Icon(Icons.add, color: Color(0xFFEC407A)),
         const SizedBox(
           width: 5.0,
@@ -37,9 +40,6 @@ class _MembershipPageState extends State<MembershipPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Membresia'),
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: Stack(
@@ -48,7 +48,7 @@ class _MembershipPageState extends State<MembershipPage> {
             Image(image: new AssetImage('assets/images/Plantilla.png'), fit: BoxFit.cover,),
             Center(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   const Image(
                     image: AssetImage('assets/images/smillingDog.png'),
@@ -76,14 +76,14 @@ class _MembershipPageState extends State<MembershipPage> {
                     ),
                   ),
                   const SizedBox(
-                    height: 32.0,
+                    height: 42.0,
                   ),
                   _addRowOption(op1),
                   _addRowOption(op2),
                   _addRowOption(op3),
                   _addRowOption(op4),
                   const SizedBox(
-                    height: 62.0,
+                    height: 82.0,
                   ),
                   SizedBox(
                     width: 200,

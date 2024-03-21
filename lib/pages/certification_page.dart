@@ -1,6 +1,6 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:petsgo/pages/profilewalker_page.dart';
+import 'package:petsgo/pages/profile_walker_page.dart';
 
 class CertificationPage extends StatefulWidget {
   const CertificationPage({super.key});
@@ -52,6 +52,10 @@ class _CertificationPageState extends State<CertificationPage> {
         });
       }
     }
+  }
+
+  void _onSendCertificationButtonClicked(){
+    Navigator.pop(context);
   }
 
   @override
@@ -145,7 +149,9 @@ class _CertificationPageState extends State<CertificationPage> {
                 width: 200,
                 height: 45,
                 child: ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    _onSendCertificationButtonClicked();
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.lightBlue,
                   ),

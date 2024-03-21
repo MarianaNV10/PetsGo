@@ -2,14 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:petsgo/pages/membership_page.dart';
 import 'package:petsgo/pages/profile_owner_page.dart';
 
-class OwnerPage extends StatefulWidget {
-  const OwnerPage({super.key});
+class OwnerInitPage extends StatefulWidget {
+  const OwnerInitPage({super.key});
 
   @override
-  State<OwnerPage> createState() => _OwnerPageState();
+  State<OwnerInitPage> createState() => _OwnerInitPageState();
 }
 
-class _OwnerPageState extends State<OwnerPage> {
+class _OwnerInitPageState extends State<OwnerInitPage> {
+
+  bool isVisible = true;
+
+  void _toggleVisibility(){
+    setState(() {
+      isVisible = !isVisible;
+    });
+  }
+
+  void _onWalkersButtonClicked(){
+
+  }
+
+  void _onNewWalkButtonClicked(){
+
+  }
+
+  void _onWalksButtonClicked(){
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +45,16 @@ class _OwnerPageState extends State<OwnerPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  //_widgetOptions.elementAt(_selectedIndex),
+                  const SizedBox(
+                    height: 30.0,
+                  ),
                   const Image(
                     image: AssetImage('assets/images/logo.png'),
                     width: 170,
                     height: 170,
                   ),
                   const SizedBox(
-                    height: 60.0,
+                    height: 50.0,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +75,9 @@ class _OwnerPageState extends State<OwnerPage> {
                                 borderRadius: BorderRadius.all(Radius.circular(35.0)),
                               ),
                             ),
-                            onPressed: (){},
+                            onPressed: (){
+                              _onWalkersButtonClicked();
+                            },
                           ),
                           const Text('Paseadores'),
                         ],
@@ -76,7 +101,9 @@ class _OwnerPageState extends State<OwnerPage> {
                                 borderRadius: BorderRadius.all(Radius.circular(35.0)),
                               ),
                             ),
-                            onPressed: (){},
+                            onPressed: (){
+                              _onNewWalkButtonClicked();
+                            },
                           ),
                           const Text('Nuevo paseo'),
                         ],
@@ -100,7 +127,9 @@ class _OwnerPageState extends State<OwnerPage> {
                                 borderRadius: BorderRadius.all(Radius.circular(35.0)),
                               ),
                             ),
-                            onPressed: (){},
+                            onPressed: (){
+                              _onWalksButtonClicked();
+                            },
                           ),
                           const Text('Paseos'),
                         ],

@@ -20,7 +20,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Rol? _rol = Rol.paseador;
 
   void _onCreateAccountButtonClicked(){
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => RegisterConfPage()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const RegisterConfPage()));
   }
 
   @override
@@ -31,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Image(image: new AssetImage('assets/images/Plantilla.png'), fit: BoxFit.cover),
+            Image(image: new AssetImage('assets/images/plantillaB.png'), fit: BoxFit.cover),
             Center(
               child: SingleChildScrollView(
                 child: Column(

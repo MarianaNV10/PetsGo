@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:petsgo/pages/profile_owner_page.dart';
 
 import 'membership_page.dart';
-import 'owner_page.dart';
+import 'owner_init_page.dart';
 
 class HomeButtonNavigationPage extends StatefulWidget {
   const HomeButtonNavigationPage({super.key});
@@ -15,7 +15,7 @@ class _HomeButtonNavigationPageState extends State<HomeButtonNavigationPage> {
 
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    OwnerPage(),
+    OwnerInitPage(),
     MembershipPage(),
     ProfileOwnerPage()
   ];
@@ -25,7 +25,6 @@ class _HomeButtonNavigationPageState extends State<HomeButtonNavigationPage> {
       _selectedIndex = index;
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -39,15 +38,15 @@ class _HomeButtonNavigationPageState extends State<HomeButtonNavigationPage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.house_outlined),
+            icon: Icon(Icons.home, color: Colors.black,),
             label: 'Inicio',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
+            icon: Icon(Icons.card_membership, color: Colors.black,),
             label: 'Membresia',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_rounded),
+            icon: Icon(Icons.person_rounded, color: Colors.black,),
             label: 'Perfil',
           ),
         ],

@@ -12,11 +12,11 @@ class InitPage extends StatefulWidget {
 class _InitPageState extends State<InitPage> {
 
   void _onLoginButtonClicked(){
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginPage()));
   }
 
   void _onRegisterButtonClicked(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterPage()));
   }
 
   @override
@@ -27,7 +27,7 @@ class _InitPageState extends State<InitPage> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Image(image: new AssetImage('assets/images/Plantilla.png'), fit: BoxFit.cover,),
+            const Image(image: AssetImage('assets/images/plantillaB.png')),
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

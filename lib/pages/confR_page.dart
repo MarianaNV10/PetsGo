@@ -13,36 +13,37 @@ class _RegisterConfPageState extends State<RegisterConfPage> {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         child: Stack(
             fit: StackFit.expand,
             children: [
-              Image(image: new AssetImage('assets/images/Plantilla.png'), fit: BoxFit.cover,),
+              Image(image: AssetImage('assets/images/plantillaB.png'), fit: BoxFit.cover,),
               Center(
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    Padding(padding: EdgeInsets.symmetric(vertical: 42.0)),
                     Image(
                         image: AssetImage('assets/images/MDWalk.png')
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 16.0,
                     ),
-                    const Text(
+                    Text(
                       "¡Bienvenid@ a PetsGo!",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 18,
                         color: Color(0xFF8492A6),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 16.0,
                     ),
-                    const Text(
+                    Text(
                       "Se ha enviado una confirmación de la creación de la cuenta al correo registrado.",
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 18,
                         color: Color(0xFF8492A6),
                       ),
