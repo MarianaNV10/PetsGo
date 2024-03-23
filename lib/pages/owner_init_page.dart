@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:petsgo/pages/membership_page.dart';
+import 'package:petsgo/pages/new_walk_page.dart';
 import 'package:petsgo/pages/profile_owner_page.dart';
 
 class OwnerInitPage extends StatefulWidget {
@@ -24,7 +25,7 @@ class _OwnerInitPageState extends State<OwnerInitPage> {
   }
 
   void _onNewWalkButtonClicked(){
-
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const NewWalkPage()));
   }
 
   void _onWalksButtonClicked(){
