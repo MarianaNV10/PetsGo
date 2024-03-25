@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'PetsGo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent),
+        colorScheme: const ColorScheme.light(primary: Color(0xFF0DB3CA)),
         useMaterial3: true,
       ),
       home: const ScoreWalkPage(),
