@@ -8,6 +8,7 @@ import 'package:petsgo/pages/membership_page.dart';
 import 'package:petsgo/pages/owner_init_page.dart';
 import 'package:petsgo/pages/profile_walker_page.dart';
 import 'package:petsgo/pages/register_page.dart';
+import 'package:petsgo/pages/score_walk_page.dart';
 import 'package:petsgo/pages/splash_page.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent),
         useMaterial3: true,
       ),
-      home: const SplashPage(),
+      home: const ScoreWalkPage(),
     );
   }
 }
