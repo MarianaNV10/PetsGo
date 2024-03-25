@@ -176,7 +176,7 @@ class _ScoreWalkPageState extends State<ScoreWalkPage> {
                 const Text(
                   "Califique el paseo",
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF8492A6),
                   ),
@@ -195,7 +195,7 @@ class _ScoreWalkPageState extends State<ScoreWalkPage> {
                 const Text(
                   "Valeria Montes",
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 22,
                     color: Color(0xFF8492A6),
                   ),
                 ),
@@ -313,25 +313,6 @@ class _ScoreWalkPageState extends State<ScoreWalkPage> {
                 ),
                 const SizedBox(
                   height: 12.0,
-                ),
-                SizedBox(
-                  width: 200,
-                  height: 45,
-                  child: ElevatedButton(
-                    onPressed: (){
-
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lightBlue,
-                    ),
-                    child: const Text(
-                      'Pagar',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
                 ),
                 Text(
                   _comments.text,
