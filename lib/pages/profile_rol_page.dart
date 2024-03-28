@@ -1,22 +1,25 @@
+
 import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:petsgo/pages/certification_page.dart';
+import 'package:petsgo/pages/home_button_navigation_bar_walker_page.dart';
 
 class ProfileWalkerPage extends StatefulWidget {
   const ProfileWalkerPage({super.key});
 
   @override
-  State<ProfileWalkerPage> createState() => _ProfileWalkerPageState();
+  State<ProfileWalkerPage> createState() => _ProfileRolPageState();
 }
 
-class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
+class _ProfileRolPageState extends State<ProfileWalkerPage> {
 
   final _celular = TextEditingController();
   final _ubicacion = TextEditingController();
   final _experience = TextEditingController();
+  bool _rol = false;
   XFile? _image;
   String imageBase64 = "";
   String _userDescription = "";
@@ -33,7 +36,11 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
   }
 
   void _onCertificationButtonClicked(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => CertificationPage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const CertificationPage()));
+  }
+
+  void _onFinishButtonClicked(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeButtonNavigationBarWalkerPage()));
   }
 
   @override
@@ -46,7 +53,13 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const Text(
+                _rol ?  const Text(
+                  "Datos dueño de perro",
+                  style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ) :  const Text(
                   "Datos paseador",
                   style: TextStyle(
                     fontSize: 35,
@@ -139,10 +152,12 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                 ),
                 TextField(
                   controller: _experience,
-                  maxLines: null,
+                  textCapitalization: TextCapitalization.sentences,
+                  minLines: 1,
+                  maxLines: 3,
                   decoration: InputDecoration(
                     labelText: 'Agrega una descripción',
-                    hintText: 'Ingrese su experiencia paseando mascotas\n y, las razas y tamaños que esta dispuesto a\n pasear.',
+                    hintText: 'Ingrese anotaciones importantes, entre otros',
                     border: const OutlineInputBorder(),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
@@ -164,9 +179,9 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                   },
                 ),
                 const SizedBox(
-                  height: 20.0,
+                  height: 42.0,
                 ),
-                Row(
+                _rol ? Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     SizedBox(
@@ -196,6 +211,7 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                       height: 45,
                       child: ElevatedButton(
                         onPressed: (){
+                          _onFinishButtonClicked();
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlue,
@@ -210,6 +226,24 @@ class _ProfileWalkerPageState extends State<ProfileWalkerPage> {
                       ),
                     ),
                   ],
+                ) : SizedBox(
+                  width: 150,
+                  height: 45,
+                  child: ElevatedButton(
+                    onPressed: (){
+                      _onFinishButtonClicked();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.lightBlue,
+                    ),
+                    child: const Text(
+                      'Finalizar',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),

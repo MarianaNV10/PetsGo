@@ -4,14 +4,14 @@ import 'package:petsgo/pages/profile_owner_page.dart';
 import 'membership_page.dart';
 import 'owner_init_page.dart';
 
-class HomeButtonNavigationPage extends StatefulWidget {
-  const HomeButtonNavigationPage({super.key});
+class HomeButtonNavigationBarOwnerPage extends StatefulWidget {
+  const HomeButtonNavigationBarOwnerPage({super.key});
 
   @override
-  State<HomeButtonNavigationPage> createState() => _HomeButtonNavigationPageState();
+  State<HomeButtonNavigationBarOwnerPage> createState() => _HomeButtonNavigationBarOwnerPageState();
 }
 
-class _HomeButtonNavigationPageState extends State<HomeButtonNavigationPage> {
+class _HomeButtonNavigationBarOwnerPageState extends State<HomeButtonNavigationBarOwnerPage> {
 
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[

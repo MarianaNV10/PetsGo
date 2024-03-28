@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:petsgo/pages/canceled_walk_page.dart';
 import 'package:petsgo/pages/certification_page.dart';
 import 'package:petsgo/pages/confR_page.dart';
-import 'package:petsgo/pages/home_button_navigation_bar_page.dart';
+import 'package:petsgo/pages/home_button_navigation_bar_owner_page.dart';
 import 'package:petsgo/pages/login_page.dart';
 import 'package:petsgo/pages/membership_page.dart';
 import 'package:petsgo/pages/owner_init_page.dart';
-import 'package:petsgo/pages/profile_walker_page.dart';
+import 'package:petsgo/pages/profile_owner_page.dart';
+import 'package:petsgo/pages/profile_rol_page.dart';
 import 'package:petsgo/pages/register_page.dart';
 import 'package:petsgo/pages/score_walk_page.dart';
 import 'package:petsgo/pages/splash_page.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         colorScheme: const ColorScheme.light(primary: Color(0xFF0DB3CA)),
         useMaterial3: true,
       ),
-      home: const ScoreWalkPage(),
+      home: const ProfileWalkerPage(),
     );
   }
 }

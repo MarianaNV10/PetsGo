@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:petsgo/pages/home_button_navigation_bar_page.dart';
+import 'package:petsgo/pages/home_button_navigation_bar_owner_page.dart';
 import 'package:petsgo/pages/owner_init_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   bool _rolWalker = false;
   void _onLoginButtonClicked(){
     if(_rolOwner){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeButtonNavigationPage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeButtonNavigationBarOwnerPage()));
     }
     else{
       //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ()));
